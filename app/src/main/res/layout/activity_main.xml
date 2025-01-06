@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="btn_one,btn_two"
+        app:constraint_referenced_ids="btn_one,draggable"
         app:layout_constraintBottom_toTopOf="@id/btn_one" />
 
     <Button
@@ -45,19 +45,28 @@
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_two"
+        app:layout_constraintEnd_toStartOf="@id/draggable"
         app:layout_constraintHorizontal_weight="1"
         android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/btn_two"
-        android:text="@string/change_fragment"
+    <com.example.lifecycleactions.DraggableLayout
+        android:id="@+id/draggable"
         android:layout_width="0dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_one"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        app:layout_constraintHorizontal_weight="1">
+
+        <TextView
+            android:id="@+id/btn_two"
+            android:textColor="@color/white"
+            android:text="@string/change_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.example.lifecycleactions.DraggableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

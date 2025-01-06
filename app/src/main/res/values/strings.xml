@@ -2,7 +2,7 @@
     <string name="app_name">LifecycleActions</string>
     <string name="activity_state">Activity state:</string>
     <string name="open_activity">Open activity</string>
-    <string name="change_fragment">Change fragment</string>
+    <string name="change_fragment">Drag me</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
